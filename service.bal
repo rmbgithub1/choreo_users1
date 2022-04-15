@@ -1,9 +1,7 @@
 import ballerina/log;
 import ballerina/http;
 
-const port = 9090;
-
-service /users on new http:Listener(port) {
+service /users on new http:Listener(9090) {
 
     resource function get all() returns json|error {
         // Send a response back to the caller.
